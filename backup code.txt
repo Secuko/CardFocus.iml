@@ -1,0 +1,30 @@
+Directionality (
+          textDirection: TextDirection.rtl,
+          child:Center(
+              child: Stack(
+                alignment: AlignmentDirectional.center,
+                textDirection: TextDirection.ltr,
+                children: <Widget>[
+                  Container(
+                      width: 192,
+                      height: 60,
+                      child: FlatButton(
+                          padding: EdgeInsets.all(0.0),
+                          onPressed: () => changeGameStatus(),
+                          child: Image.asset('assets/Button/Button4.png')
+                      )
+                  ),
+                  Container(
+                      child: Text(
+                          'Start',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 26,
+                         )
+                      )
+                  )
+                ]
+              )
+
+Построение кнопки не с помощью GestureDetector, а с помощью FlatButton
+- Не смог решить проблему вывода текста на кнопке - при клике на текст нажатие не срабатывает
